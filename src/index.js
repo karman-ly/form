@@ -17,7 +17,7 @@ function TextInput({name, placeholder, onChange, onKeyDown, formData}) {
 
 function TextInputSet({onChange, onKeyDown, formData, textInputs}) {
 
-    const textElements = textInputs.map(input => (
+    return textInputs.map(input => (
         <TextInput
             key={input.name}
             onChange={onChange}
@@ -26,10 +26,6 @@ function TextInputSet({onChange, onKeyDown, formData, textInputs}) {
             {...input}
         />
     ))
-
-    return (
-        {textElements: textElements}
-    )
 }
 
 function RadioInput({label, value, onChange, onKeyDown, formData}) {
